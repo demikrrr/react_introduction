@@ -31,12 +31,17 @@ export const App = () => {
     'div',
     { className: 'App' },
     null,
-    React.createElement('img', {
-      src: { logo },
-      alt: 'logo',
-      className: 'App-logo',
-    }),
-    React.createElement('p', null, 'Edit src/App.js and save to reload.'),
-    React.createElement('p', null, 'This is a React component without JSX.'),
+    React.createElement(
+      'header',
+      { className: 'App-header' },
+      null,
+      React.createElement('img', {
+        src: { logo },
+        alt: 'logo',
+        className: 'App-logo',
+      }),
+      React.createElement('p', null, 'Edit src/App.js and save to reload.'),
+      React.createElement('a', null, 'This is a React component without JSX.'),
+    ),
   );
 };
