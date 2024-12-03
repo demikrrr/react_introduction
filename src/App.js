@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 // export const App = () => {
@@ -6,7 +5,7 @@ import './App.css';
 //   return (
 //     <div className="App">
 //       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
+//         <img src="./logo192.png" className="App-logo" alt="logo" />
 //         <p>
 //           Edit <code>src/App.js</code> and save to reload.
 //         </p>
@@ -36,12 +35,18 @@ export const App = () => {
       { className: 'App-header' },
       null,
       React.createElement('img', {
-        src: { logo },
+        src: './logo192.png',
         alt: 'logo',
         className: 'App-logo',
       }),
       React.createElement('p', null, 'Edit src/App.js and save to reload.'),
-      React.createElement('a', null, 'This is a React component without JSX.'),
+      React.createElement(
+        'span',
+        { className: 'App-link' },
+        null,
+        React.createElement('a', { href: 'https://reactjs.org' }, 'Learn React'),
+      ),
+      React.createElement('p', null, `${currentYear}`),
     ),
   );
 };
