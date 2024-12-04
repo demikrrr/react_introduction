@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import './App.css';
 
 // export const App = () => {
@@ -23,30 +24,35 @@ import './App.css';
 //   );
 // };
 
-import React from 'react';
 export const App = () => {
   const currentYear = new Date().getFullYear();
-  return React.createElement(
+
+  return createElement(
     'div',
     { className: 'App' },
-    null,
-    React.createElement(
+
+    createElement(
       'header',
       { className: 'App-header' },
-      null,
-      React.createElement('img', {
+
+      createElement('img', {
         src: './logo192.png',
         alt: 'logo',
         className: 'App-logo',
       }),
-      React.createElement('p', null, 'Edit src/App.js and save to reload.'),
-      React.createElement(
-        'span',
-        { className: 'App-link' },
-        null,
-        React.createElement('a', { href: 'https://reactjs.org' }, 'Learn React'),
+
+      createElement('p', null, 'Edit src/App.js and save to reload.'),
+      createElement(
+        'a',
+        {
+          className: 'App-link',
+          href: 'https://reactjs.org',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        },
+        'Learn React',
       ),
-      React.createElement('p', null, `${currentYear}`),
+      createElement('p', null, currentYear),
     ),
   );
 };
